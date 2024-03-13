@@ -1,5 +1,6 @@
 function Message(){
-    let name = 'mamad'
+
+    const name = 'mamad'
     return <h1>Hello {name}</h1>
 }
 
