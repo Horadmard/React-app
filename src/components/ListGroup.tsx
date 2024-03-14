@@ -1,19 +1,28 @@
-// import { Fragment } from "react/jsx-runtime";
+import { useState } from "react";
 
 function ListGroup() {
-  const items = ["mamad", "ali", "jafar", "asqar"];
+  const items = ["CS", "Dota2", "Apex Legends", "Fortnite"];
+
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
   if (items.length === 5) {
     return null;
   }
   return (
     <>
-      <h1>Hellooooo</h1>
+      <h1>List</h1>
       <ul className="list-group">
         {items.map((item, index) => (
           <li
             key={item}
-            className="list-group-item"
-            onClick={() => alert("Clicked on " + item + " " + index)}
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
           >
             {item}
           </li>

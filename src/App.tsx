@@ -5,6 +5,8 @@ function App() {
   return (
     <div>
       <Message></Message>
+      <ListGroup/>
+      <ListGroup/>
       <ListGroup></ListGroup>
     </div>
   );
